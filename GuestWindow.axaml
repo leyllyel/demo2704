@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Demo2704.GuestWindow"
+        x:CompileBindings="False"
+        Title="ООО '41 размер'">
+  <Grid RowDefinitions="50 * 50" ColumnDefinitions="* * *" ShowGridLines="True">
+		<ListBox Name="OrderListBox1" Grid.Row="1" Grid.ColumnSpan="2" SelectionChanged="OrderListBox1_SelectionChanged">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border BorderBrush="Black" BorderThickness="2">
+						<Grid ColumnDefinitions="* * *">
+							<Image Grid.Column="0" Source="{Binding Image}"></Image>
+                            <StackPanel Grid.Column="1">
+								<TextBlock Text="{Binding Productname}"></TextBlock>
+                                <TextBlock Text="{Binding Productdescription}" TextWrapping="Wrap"></TextBlock>
+                                <TextBlock Text="{Binding Productmanufacturer.Name}"></TextBlock>
+                                <TextBlock Text="{Binding Productcost}"></TextBlock>
+                            </StackPanel>
+                            <TextBlock Grid.Column="2" Text="{Binding Productdiscountamount}"></TextBlock>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

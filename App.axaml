@@ -1,0 +1,17 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="Demo2704.App"
+             RequestedThemeVariant="Light">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.Styles>
+       <Style Selector="Window">
+			<Setter Property="MinHeight" Value="200"></Setter>
+            <Setter Property="MinWidth" Value="300"></Setter>
+            <Setter Property="WindowStartupLocation" Value="CenterScreen"></Setter>
+            <Setter Property="Icon" Value="../Resources/icon.ico"></Setter>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+        </Style>
+        <FluentTheme />
+    </Application.Styles>
+</Application>
